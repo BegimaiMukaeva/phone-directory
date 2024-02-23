@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.modalBackdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+}
+.modal {
+    width: 500px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    z-index: 100;
+}
+.modalForm {
+    display: flex;
+    flex-direction: column;
+}
+.containerTitle {
+    margin: 20px 0;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+}
+.modalForm input {
+    height: 40px;
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid #ccc;
+    background-color: #F0FFF0;
+    padding: 8px;
+    font-family: Nunito;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 10px 0;
+}
+.modalButton {
+    height: 35px;
+    background-color: transparent;
+    color: #46bf45;
+    padding: 10px 20px;
+    margin-top: 10px;
+    outline: none;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid #46bf45;
+}
+.modalButton:hover {
+    background-color: #46bf45;
+    color: #ffffff;
+    transform: scale(1.01);
+}
+
+.modalButton:active {
+    background-color: #46bf45;
+    color: #ffffff;
+    transform: scale(0.95);
+}
+.modalButton.cancel {
+    height: 35px;
+    color: rgba(243, 13, 13, 0.93);
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: transparent;
+    outline: none;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid rgba(243, 13, 13, 0.93);
+}
+.modalButton.cancel:hover {
+    background-color: rgba(243, 13, 13, 0.93);
+    color: #fff;
+    transform: scale(1.01);
+}
+
+.modalButton.cancel:active {
+    background-color: rgba(243, 13, 13, 0.93);
+    color: #fff;
+    transform: scale(0.95);
+}
