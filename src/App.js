@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import ContactForm from '../src/components/ContactForm/ContactForm';
+import ContactList from '../src/components/ContactList/ContactList';
 
 function App() {
+  const [contacts, setContacts] = useState([]);
+  const [editingContact, setEditingContact] = useState(null);
+
+  const addContact = (contact) => {
+    if (editingContact) {
+      setContacts(contacts.map(c => c.id === editingContact.id ? { ...contact, id: editingContact.id } : c));
+    } else {
+      setContacts([...contacts, { ...contact, id: Date.now() }]);
+    }
+    setEditingContact(null);
+  };
+
+  const startEditingContact = (contact) => {
+    setEditingContact(contact);
+  };
+
+  const deleteContact = (id) => {
+    setContacts(contacts.filter(contact => contact.id !== id));
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h2>Телефонный справочник</h2>
+      <ContactForm addContact={addContact} editingContact={editingContact} />
+      <ContactList contacts={contacts} deleteContact={deleteContact} startEditingContact={startEditingContact} />
     </div>
   );
 }
