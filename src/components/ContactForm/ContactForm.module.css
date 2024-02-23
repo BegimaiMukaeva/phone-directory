@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 100%;
+    margin: 0 auto;
+    font-family: Nunito;
+}
+.containerTitle {
+    margin: 20px 0;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+}
+.containerForm {
+    margin: 20px;
+    display: flex;
+}
+.containerForm input {
+    width: 280px;
+    height: 40px;
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid #ccc;
+    background-color: #F0FFF0;
+    padding: 8px;
+    font-family: Nunito;
+    font-size: 16px;
+    font-weight: 500;
+    margin-right: 30px;
+}
+.submitButton {
+    width: 200px;
+    height: 40px;
+    background-color: #46bf45;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    outline: none;
+    font-size: 16px;
+    font-weight: 500;
+}
+.submitButton:hover {
+    background-color: #46bf45;
+    transform: scale(1.01);
+}
+
+.submitButton:active {
+    background-color: #46bf45;
+    transform: scale(0.95);
+}

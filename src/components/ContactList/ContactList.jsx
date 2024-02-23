@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import EditContactModal from '../EditContactModal/EditContactModal';
 import { useSelector, useDispatch } from 'react-redux';
 import { deleteContact, updateContact } from '../../store/contactsSlice';
+import style from './ContactList.module.css';
 
 function ContactList() {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -16,13 +17,13 @@ function ContactList() {
     };
 
     return (
-        <div>
+        <div className={style.container}>
             <table>
                 <thead>
                     <tr>
-                        <th>Имя</th>
+                        <th>ФИО</th>
                         <th>Телефон</th>
-                        <th>Отношение</th>
+                        <th>Кем приходится</th>
                         <th>Действия</th>
                     </tr>
                 </thead>
@@ -33,8 +34,8 @@ function ContactList() {
                             <td>{contact.phone}</td>
                             <td>{contact.relation}</td>
                             <td>
-                                <button onClick={() => dispatch(deleteContact(contact.id))}>Удалить</button>
-                                <button onClick={() => handleEdit(contact)}>Редактировать</button>
+                                <button className={style.deleteButton} onClick={() => dispatch(deleteContact(contact.id))}>Удалить</button>
+                                <button className={style.editButton} onClick={() => handleEdit(contact)}>Редактировать</button>
                             </td>
                         </tr>
                     ))}

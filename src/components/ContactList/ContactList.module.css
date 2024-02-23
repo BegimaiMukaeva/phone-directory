@@ -1,0 +1,85 @@
+
+table {
+    font-family: Nunito;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px;
+    border: 1px solid black;
+}
+tr th {
+    background-color: #bdd6ee;
+}
+th, td {
+    font-family: Nunito;
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid black;
+    font-size: 15px;
+}
+td:nth-child(5){
+    font-weight: bold;
+}
+th {
+    background-color: #ffffff;
+    color: black;
+}
+table tr:nth-child(odd) {
+    background-color: #ffffff;
+    color: black;}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+    color: black;
+}
+
+table tr:hover {
+    background-color: #F0FFF0;
+}
+.editButton {
+    height: 35px;
+    background-color: transparent;
+    color: #46bf45;
+    margin-left: 20px;
+    outline: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 6px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid #46bf45;
+}
+.editButton:hover {
+    background-color: #46bf45;
+    color: #ffffff;
+    transform: scale(1.01);
+}
+
+.editButton:active {
+    background-color: #46bf45;
+    color: #ffffff;
+    transform: scale(0.95);
+}
+.deleteButton {
+    height: 35px;
+    color: rgba(243, 13, 13, 0.93);
+    margin-left: 10px;
+    background-color: transparent;
+    outline: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 6px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid rgba(243, 13, 13, 0.93);
+}
+.deleteButton:hover {
+    background-color: rgba(243, 13, 13, 0.93);
+    color: #fff;
+    transform: scale(1.01);
+}
+
+.deleteButton:active {
+    background-color: rgba(243, 13, 13, 0.93);
+    color: #fff;
+    transform: scale(0.95);
+}

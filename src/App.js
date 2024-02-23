@@ -24,8 +24,7 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <h2>Телефонный справочник</h2>
+    <div>
       <ContactForm addContact={addContact} editingContact={editingContact} />
       <ContactList contacts={contacts} deleteContact={deleteContact} startEditingContact={startEditingContact} />
     </div>
